@@ -1,0 +1,6 @@
+{
+  "name": "NETHRA - Numerology Life Reading System",
+  "description": "NETHRA - ඔබේ අංකවලින් ඔබේ මාවත හඳුනාගන්න. Professional internal numerology engine and complete 22-section Sinhala life reading report generator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sinhala: 'Noto Sans Sinhala', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-cinzel: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  .font-sinhala {
+    font-family: var(--font-sinhala);
+    line-height: 1.8;
+  }
+
+  .font-cinzel {
+    font-family: var(--font-cinzel);
+    letter-spacing: 0.05em;
+  }
+}
+
+/* Custom Gold Gradient & Glow effects */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFE29F 0%, #D4AF37 50%, #997A15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+}
+
+/* A4 Page Formatting for PDF preview and Print */
+.a4-page {
+  width: 794px; /* standard 96dpi A4 width */
+  min-height: 1123px; /* standard 96dpi A4 height */
+  height: 1123px;
+  position: relative;
+  page-break-after: always;
+  break-after: page;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media print {
+  body {
+    background: #080B14 !important;
+    color: #E6EAF2 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  .a4-page {
+    width: 210mm !important;
+    min-height: 297mm !important;
+    height: 297mm !important;
+    margin: 0 !important;
+    padding: 20mm !important;
+    box-shadow: none !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
