@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/Nethra/', // GitHub Pages URL එක සඳහා base path එක (Repository නම Capital 'N' සහිතව)[cite: 2]
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
